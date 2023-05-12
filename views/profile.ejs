@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+        <%- include("partials/nav") %>
+
+        <h1 style="font-size: 50px;text-align: center;">Profiles</h1>
+        <div style="margin: 100px;">
+            <h1>Name: <%= person %></h1>
+            <h1>Age: <%= info.age %></h1>
+            <h1>Height: <%= info.height %></h1>
+            <h1>Education: <%= info.education %></h1>
+            <h1>work: <%= info.work %></h1>
+            <h1>Languages: </h1>
+            <ul>
+                <% info.languages.forEach(function(item){ %>
+                    <li><%= item %></li>
+                <% }) %>
+            </ul>
+        </div>  
+    </body>
+</html>

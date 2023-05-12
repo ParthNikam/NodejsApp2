@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+        <style>
+            h1{
+                text-align: center;
+                color:rgb(212, 0, 255);
+                font-family: 'calibri';
+                font-size: 100px;
+            }
+
+            h2 {
+                text-align: center;
+                font-family: 'consolas';
+            }
+        </style>
+    </head>
+    <body style="background-color: black; color:lightgrey;">
+        <%- include("nav") %>
+
+        <div style="margin-top: 100px;">
+            <h1>Contact...</h1>
+        </div>
+        <p>?org=Google&name=Elon Musk</p>
+        <p><%= person.name, person.org %></p>
+
+        <form id="contact-form" method="POST" action="/contact/ejs">
+            <label for="name">Enter person name</label>
+            <input type="text" name="name"><br>
+            <label for="org">Enter person's organization</label>
+            <input type="text" name="org"><br>
+            <label for="dept">Enter person's department</label>
+            <input type="text" name="dept"><br>
+            <input type="submit" value="submit"><br>
+        </form>
+
+    </body>
+</html>

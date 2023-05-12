@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Page</title>
+    <style>
+      h1{
+          text-align: center;
+          color:rgb(212, 0, 255);
+          font-family: 'calibri';
+          font-size: 100px;
+      }
+
+      h2 {
+          text-align: center;
+          font-family: 'consolas';
+      }
+  </style>
+  </head>
+  <body>
+    <h1><%= person %>'s Profile</h1>
+    <form method="POST" action="/profile/<%= person %>">
+      <label for="age">Age:</label>
+      <input type="text" name="age" value="<%= info.age %>"><br>
+
+      <label for="height">Height:</label>
+      <input type="text" name="height" value="<%= info.height %>"><br>
+
+      <label for="work">Work:</label>
+      <input type="text" name="work" value="<%= info.work %>"><br>
+
+      <label for="education">Education:</label>
+      <input type="text" name="education" value="<%= info.education %>"><br>
+
+      <label for="languages">Languages:</label>
+      <ul>
+        <% info.languages.forEach(function(language) { %>
+          <li><%= language %></li>
+        <% }); %>
+      </ul>
+
+      <input type="submit" value="Save">
+    </form>
+  </body>
+</html>

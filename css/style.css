@@ -1,0 +1,19 @@
+body {background-color: black; color: lightgrey;}
+
+
+a {color: lightskyblue;}
+
+h1{
+    text-align: center;
+    color:rgb(212, 0, 255);
+    font-family: 'calibri';
+    font-size: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'consolas';
+}
+
+p {color: lightgrey; text-align: center; font-family: 'consolas';}
+li {color: lightgrey; text-align: center; font-family: 'consolas'; font-size: 30px;}
